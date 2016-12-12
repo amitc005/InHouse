@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2016 11:51:13 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.main.pojo.TblProjectGroup" table="tbl_project_group" catalog="db_manager">
+        <id name="txtId" type="string">
+            <column name="txtId" length="38" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tblProject" class="com.main.pojo.TblProject" fetch="select">
+            <column name="txtProjectId" length="38" />
+        </many-to-one>
+        <many-to-one name="tblProjectInquiry" class="com.main.pojo.TblProjectInquiry" fetch="select">
+            <column name="txtInquiryId" length="38" not-null="true" />
+        </many-to-one>
+        <property name="txtDeptId" type="string">
+            <column name="txtDeptId" length="38" not-null="true" />
+        </property>
+        <property name="txtGroupCode" type="string">
+            <column name="txtGroupCode" length="15" />
+        </property>
+        <property name="txtGropuMember" type="java.lang.Integer">
+            <column name="txtGropuMember" />
+        </property>
+        <property name="txtPassword" type="string">
+            <column name="txtPassword" length="20" />
+        </property>
+        <property name="txtProjectAmt" type="java.lang.Integer">
+            <column name="txtProjectAmt" />
+        </property>
+        <property name="txtPaidAmt" type="java.lang.Integer">
+            <column name="txtPaidAmt" />
+        </property>
+        <property name="txtBalanceAmt" type="java.lang.Integer">
+            <column name="txtBalanceAmt" />
+        </property>
+        <property name="txtRemark" type="string">
+            <column name="txtRemark" length="150" />
+        </property>
+        <property name="txtIsDelete" type="java.lang.Character">
+            <column name="txtIsDelete" length="1" />
+        </property>
+        <property name="txtSession" type="int">
+            <column name="txtSession" not-null="true" />
+        </property>
+        <property name="txtEntryDate" type="timestamp">
+            <column name="txtEntryDate" length="19" not-null="true" />
+        </property>
+        <property name="txtIsActive" type="java.lang.Character">
+            <column name="txtIsActive" length="1" />
+        </property>
+        <set name="tblStudents" table="tbl_student" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" />
+            </key>
+            <one-to-many class="com.main.pojo.TblStudent" />
+        </set>
+        <set name="tblProjectStatuses" table="tbl_project_status" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" />
+            </key>
+            <one-to-many class="com.main.pojo.TblProjectStatus" />
+        </set>
+        <set name="tblProjectBugs" table="tbl_project_bug" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" not-null="true" />
+            </key>
+            <one-to-many class="com.main.pojo.TblProjectBug" />
+        </set>
+        <set name="tblGroupAccounts" table="tbl_group_account" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" />
+            </key>
+            <one-to-many class="com.main.pojo.TblGroupAccount" />
+        </set>
+        <set name="tblGroupScheduleses" table="tbl_group_schedules" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" />
+            </key>
+            <one-to-many class="com.main.pojo.TblGroupSchedules" />
+        </set>
+        <set name="tblGroupTelecallings" table="tbl_group_telecalling" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" />
+            </key>
+            <one-to-many class="com.main.pojo.TblGroupTelecalling" />
+        </set>
+        <set name="tblProjectUpdateses" table="tbl_project_updates" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" />
+            </key>
+            <one-to-many class="com.main.pojo.TblProjectUpdates" />
+        </set>
+        <set name="tblGroupQuerieses" table="tbl_group_queries" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="txtGroupId" length="38" />
+            </key>
+            <one-to-many class="com.main.pojo.TblGroupQueries" />
+        </set>
+    </class>
+</hibernate-mapping>

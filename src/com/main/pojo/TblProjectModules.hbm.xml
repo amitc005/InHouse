@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2016 11:51:13 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.main.pojo.TblProjectModules" table="tbl_project_modules" catalog="db_manager">
+        <id name="txtId" type="java.lang.Integer">
+            <column name="txtId" />
+            <generator class="identity" />
+        </id>
+        <property name="txtDeptId" type="string">
+            <column name="txtDeptId" length="38" not-null="true" />
+        </property>
+        <property name="txtProjectId" type="string">
+            <column name="txtProjectId" length="38" />
+        </property>
+        <property name="txtModuleName" type="string">
+            <column name="txtModuleName" length="200" />
+        </property>
+        <property name="txtDescription" type="string">
+            <column name="txtDescription" length="65535" />
+        </property>
+        <property name="txtModuleNo" type="string">
+            <column name="txtModuleNo" length="15" not-null="true" />
+        </property>
+        <property name="txtEntryDate" type="timestamp">
+            <column name="txtEntryDate" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

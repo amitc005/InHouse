@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:5235/db_manager</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">amitmanutd@nija.com0052311</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="current_session_context_class">thread</property>
+    <mapping resource="com/main/pojo/TblTaskAllocation.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblTechnology.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblGroupTelecalling.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblOutsourceProject.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectGroup.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblContact.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblGroupSchedules.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblOutsource.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectInquiry.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectRegistration.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectUpdates.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectStatus.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblTallychart1.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblLogincounter.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblTallychart.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectMaterial.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblTallychart29082015.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblStudent.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblGroupAccount.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblAlgorithm.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblInternship.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectRequirement.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblJobalert.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblGroupQueriesAnswer.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectBug.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProject.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblQuickInquiry.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblWorklog.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectModules.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblEmployee.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblSnapshot.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblGroupQueries.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblInquiryTelecalling.hbm.xml"/>
+    <mapping resource="com/main/pojo/TblProjectInquiryMaterial.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

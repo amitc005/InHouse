@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2016 11:51:13 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.main.pojo.TblContact" table="tbl_contact" catalog="db_manager">
+        <id name="txtIndex" type="java.lang.Integer">
+            <column name="txtIndex" />
+            <generator class="identity" />
+        </id>
+        <property name="txtId" type="string">
+            <column name="txtId" length="38" not-null="true" />
+        </property>
+        <property name="txtStudentName" type="string">
+            <column name="txtStudentName" length="200" />
+        </property>
+        <property name="txtContactNumber" type="string">
+            <column name="txtContactNumber" length="200" />
+        </property>
+        <property name="txtEmailId" type="string">
+            <column name="txtEmailId" length="200" />
+        </property>
+        <property name="txtEnquiredFrom" type="string">
+            <column name="txtEnquiredFrom" length="65535" />
+        </property>
+        <property name="txtIsDelete" type="java.lang.Character">
+            <column name="txtIsDelete" length="1" />
+        </property>
+        <property name="txtEntryDate" type="timestamp">
+            <column name="txtEntryDate" length="19" />
+        </property>
+        <property name="txtIsActive" type="java.lang.Character">
+            <column name="txtIsActive" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>
