@@ -18,7 +18,7 @@
                     <%
                         Object object = request.getSession().getAttribute("failtext");
                         if (object != null) {
-                            out.print("<p style='color: red'>INVALID USERNAME AND PASSWORD </p>");
+                            out.print("<p style='color: red'>USERNAME AND PASSWORD IS INCORRECT</p>");
                         }
                     %>
 
